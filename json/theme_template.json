@@ -94,6 +94,11 @@
                         "axisStyle": "showBoth"
                     }
                 ],
+                "labels": [
+                    {
+                        "show": false
+                    }
+                ],
                 "*": [
                     {
                         "titleWrap": true,

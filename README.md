@@ -4,11 +4,12 @@ Valcon (Sneaker Faqtory) template of Power BI JSON file
 
 ## To Do
 
-#### General properties
-- [ ] Document general properties
-    - [ ] General
-    - [ ] Legend
-    - [ ] Title
+#### Document  general properties
+- [ ] Colorscheme
+- [ ] Text/fonts
+- [ ] General
+- [ ] Axis
+- [ ] Legend
 #### Visual specific properties
 - [ ] Add & document stacked bar chart
 - [ ] Add & document stacked column chart
