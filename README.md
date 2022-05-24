@@ -5,8 +5,8 @@ Valcon (Sneaker Faqtory) template of Power BI JSON file
 ## To Do
 
 #### Document  general properties
-- [ ] Colorscheme
-- [ ] Text/fonts
+- [X] Colorscheme
+- [X] Text/fonts
 - [ ] General
 - [ ] Axis
 - [ ] Legend
@@ -51,9 +51,9 @@ In the following table the known issues and bugs are listed:
 ## Example
 
 Below, an empty general template is shown:
-```
+```json
 {
-    "name": "GlobalLevelTemplate",
+    "name": "ValconSFTemplate",
     "dataColors": [
         "#60BF81",
         "#3B8C66",
@@ -63,7 +63,107 @@ Below, an empty general template is shown:
         "#60BF81",
         "#3B8C66",
         "#93D94E"
-    ]
+    ],
+    "firstLevelElements": "#252423",
+    "secondLevelElements": "#605E5C",
+    "thirdLevelElements": "#8F8F8F",
+    "fourthLevelElements": "#B3B0AD",
+    "background": "#FFFFFF",
+    "secondaryBackground": "#C8C6C4",
+    "tableAccent": "#60BF81",
+    "good": "#60BF81",
+    "neutral": "#D9B300",
+    "bad": "#D64554",
+    "maximum": "#118DFF",
+    "center": "#D9B300",
+    "minimum": "#DEEFFF",
+    "null": "#FF7F48",
+    "textClasses": {
+        "callout": {
+            "fontSize": 45,
+            "fontFace": "Arial",
+            "bold": true,
+            "titleBold": true,
+            "color": "#252423"
+        },
+        "title": {
+            "fontSize": 12,
+            "fontFace": "Arial",
+            "bold": true,
+            "titleBold": true,
+            "color": "#252423"
+        },
+        "header": {
+            "fontSize": 12,
+            "fontFace": "Arial",
+            "bold": true,
+            "titleBold": true,
+            "color": "#252423"
+        },
+        "label": {
+            "fontSize": 12,
+            "fontFace": "Arial",
+            "color": "#252423"
+            
+        },
+        "smallLabel": {
+            "color": "#E6E6E6"
+        }
+    },
+    "visualStyles": {
+        "*": {
+            "*": {
+                "general": [
+                    {
+                        "responsive": true,
+                        "keepLayerOrder": true
+                    }
+                ],
+                "legend": [
+                    {
+                        "showTitle": false,
+                        "position": "Top",
+                        "show": true
+                    }
+                ],
+                "title": [
+                    {
+                        "show": true,
+                        "titleBold": true
+                    }
+                ],
+                "valueAxis": [
+                    {
+                        "show": true,
+                        "position": "Bottom",
+                        "showAxisTitle": true,
+                        "axisStyle": "showBoth"
+                    }
+                ],
+                "categoryAxis": [
+                    {
+                        "show": true,
+                        "position": "Left",
+                        "showAxisTitle": true,
+                        "axisStyle": "showBoth"
+                    }
+                ],
+                "labels": [
+                    {
+                        "show": false
+                    }
+                ],
+                "*": [
+                    {
+                        "titleWrap": true,
+                        "responsive": true,
+                        "percentageLabelPrecision": "2",
+                        "labelPrecision": "2"
+                    }
+                ]
+            }
+        }
+    }
 }
 AANVULLEN
 ```

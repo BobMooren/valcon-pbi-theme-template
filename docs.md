@@ -184,4 +184,35 @@ Fonts *across the report* are set within the `textClasses: {}` object. These are
    </tbody>
 </table>
 
-adfadsf
+The other properties are applied to the `visualStyles: {}` class. And follows the following syntax: 
+
+```json
+{
+    "visualStyles": {
+        "<visualName>": {
+            "<styleName>": {
+                "<cardName>": [{
+                    "<propertyName>": <propertyValue>
+                }]
+            }
+        }
+    }
+}
+```
+
+The `*` denotes that every sub visual  inherites the properties that are set. So the following block applies to every `<visual>` on every `<style> (not yet implemented in Power BI)`. 
+```json
+"visualStyles": {
+        "*": {
+            "*": {
+                "general": [
+                    {
+                        "responsive": true,
+                        "keepLayerOrder": true
+                    }
+                ]
+            }
+        }
+    }
+
+```
