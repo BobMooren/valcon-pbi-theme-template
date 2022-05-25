@@ -4,106 +4,73 @@ Valcon (Sneaker Faqtory) template of Power BI JSON file
 
 ## To Do
 
-#### Document  general properties
-- [X] Colorscheme
-- [X] Text/fonts
-- [ ] General
-- [ ] Axis
-- [ ] Legend
-#### Visual specific properties
-- [ ] Add & document stacked bar chart
-- [ ] Add & document stacked column chart
-- [ ] Add & document clustered bar chart
-- [ ] Add & document clustered column chart
-- [ ] Add & document 100% bar chart
-- [ ] Add & document 100% column chart
-- [ ] Add & document line chart
-- [ ] Add & document area chart
-- [ ] Add & document stacked area chart
-- [ ] Add & document line and stacked column chart
-- [ ] Add & document and clustered column chart
-- [ ] Add & document ribbon chart
-- [ ] Add & document waterfall chart
-- [ ] Add & document funnel chart
-- [ ] Add & document scatter chart
-- [ ] Add & document circle chart
-- [ ] Add & document donut chart
-- [ ] Add & document treemap
-- [ ] Add & document gauge
-- [ ] Add & document card
-- [ ] Add & document multirow card
-- [ ] Add & document KPI
-- [ ] Add & document filter/slicer
-- [ ] Add & document table
-- [ ] Add & document matric
-- [ ] Add & document decomposition tree
+- [ ] Define standard template
+- [ ] Update documentation 
 
 ## Known issues
 
 
 In the following table the known issues and bugs are listed:
  
-| Visual    | Issue                                  |
-|-----------|----------------------------------------|
-| KPI       | Callout value display units not working|
+| Visual    | Issue                                                                 |
+|-----------|-----------------------------------------------------------------------|
+| KPI       | Callout value display units not working                                                            
+| General   | Precision of data (decimal placement) should also be set in data view 
+| Treemap   | Title not bold
 
 
-## Example
+## Template
 
-Below, an empty general template is shown:
+Below, an empty general template, without a background, is shown. For a JSON with a background, check the /json/theme_template.json:
 ```json
 {
     "name": "ValconSFTemplate",
     "dataColors": [
-        "#60BF81",
-        "#3B8C66",
-        "#93D94E",
-        "#347355",
-        "#223240",
-        "#60BF81",
-        "#3B8C66",
-        "#93D94E"
+        "#1E64E8",
+        "#8fb2f4",
+        "#1850ba",
+        "#4b83ed",
+        "#0f3274",
+        "#3F4E69",
+        "#06142e",
+        "#123c8b"
     ],
-    "firstLevelElements": "#252423",
-    "secondLevelElements": "#605E5C",
-    "thirdLevelElements": "#8F8F8F",
-    "fourthLevelElements": "#B3B0AD",
+    "firstLevelElements": "#262622",
+    "secondLevelElements": "#969696",
+    "thirdLevelElements": "#E6E6E6",
+    "fourthLevelElements": "#969696",
     "background": "#FFFFFF",
-    "secondaryBackground": "#C8C6C4",
-    "tableAccent": "#60BF81",
+    "secondaryBackground": "#E6E6E6",
+    "tableAccent": "#1E64E8",
     "good": "#60BF81",
     "neutral": "#D9B300",
-    "bad": "#D64554",
-    "maximum": "#118DFF",
-    "center": "#D9B300",
-    "minimum": "#DEEFFF",
-    "null": "#FF7F48",
+    "bad": "#EE5743",
     "textClasses": {
         "callout": {
             "fontSize": 45,
             "fontFace": "Arial",
             "bold": true,
             "titleBold": true,
-            "color": "#252423"
+            "color": "#262622"
         },
         "title": {
             "fontSize": 12,
             "fontFace": "Arial",
             "bold": true,
             "titleBold": true,
-            "color": "#252423"
+            "color": "#262622"
         },
         "header": {
             "fontSize": 12,
             "fontFace": "Arial",
             "bold": true,
             "titleBold": true,
-            "color": "#252423"
+            "color": "#262622"
         },
         "label": {
             "fontSize": 12,
             "fontFace": "Arial",
-            "color": "#252423"
+            "color": "#262622"
             
         },
         "smallLabel": {
@@ -150,7 +117,28 @@ Below, an empty general template is shown:
                 ],
                 "labels": [
                     {
-                        "show": false
+                        "show": false,
+                        "labelPrecision": "2",
+                        "showSeries": false
+                    }
+                ],
+                "outspacePane": [
+                    {
+                        "backgroundColor": {
+                            "solid": {
+                                "color": "#262622"
+                            }
+                        },
+                        "foregroundColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "checkboxAndApplyColor": {
+                            "solid": {
+                                "color": "#1E64E8"
+                            }
+                        }
                     }
                 ],
                 "*": [
@@ -162,8 +150,40 @@ Below, an empty general template is shown:
                     }
                 ]
             }
+        },
+        "treemap": {
+            "*": {
+                "labels": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#E6E6E6"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "textbox": {
+            "*": {
+                "general": [
+                    {
+                        "keepLayerOrder": true
+                    }
+                ],
+                "visualHeader": [
+                    {
+                        "show": false
+                    }
+                ],
+                "background": [
+                    {
+                        "transparency": 100
+                    }
+                ]
+            }
         }
     }
 }
-AANVULLEN
 ```

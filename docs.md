@@ -200,15 +200,16 @@ The other properties are applied to the `visualStyles: {}` class. And follows th
 }
 ```
 
-The `*` denotes that every sub visual  inherites the properties that are set. So the following block applies to every `<visual>` on every `<style> (not yet implemented in Power BI)`. 
+The `*` denotes that every sub visual  inherites the properties that are set. So the following block applies to every `<visual>` on every `<style> (not yet implemented in Power BI)`. The block below shows that for every visual the legend is shown, without a title, at the top position.
 ```json
 "visualStyles": {
         "*": {
             "*": {
-                "general": [
+                  "legend": [
                     {
-                        "responsive": true,
-                        "keepLayerOrder": true
+                       "show": true,
+                        "showTitle": false,
+                        "position": "Top"
                     }
                 ]
             }
