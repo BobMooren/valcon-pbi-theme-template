@@ -1,6 +1,6 @@
 # Theme Template
 
-Valcon (Sneaker Faqtory) template of Power BI JSON file
+Valcon template of Power BI JSON file
 
 ## To Do
 
